@@ -1,6 +1,6 @@
-$('#drop-list').change(function(){
-    $(this).parent('form').submit();
-});
+// $('#drop-list').change(function(){
+//     $(this).parent('form').submit();
+// });
 
 $("document").ready(function(){
     $("#groups").on("pjax:end", function() {
