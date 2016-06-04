@@ -1,7 +1,18 @@
+$('#drop-list').change(function(){
+    $(this).parent('form').submit();
+});
+
+$("document").ready(function(){
+    $("#groups").on("pjax:end", function() {
+        $.pjax.reload({container:"#students"});
+        document.getElementById("drop-list").selected="";
+    });
+});
+
 $("#myModal").on("show.bs.modal", function (e) {
     var id = $(e.relatedTarget).data("id");
     $.ajax({
-        url:"index.php?r=site/student",
+        url:"site/student",
         data: ({ id: id }),
         type:"POST",
         dataType: "json",

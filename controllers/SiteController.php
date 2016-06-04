@@ -14,23 +14,6 @@ class SiteController extends Controller
     public function behaviors()
     {
         return [
-//            'access' => [
-//                'class' => AccessControl::className(),
-//                'only' => ['logout'],
-//                'rules' => [
-//                    [
-//                        'actions' => ['logout'],
-//                        'allow' => true,
-//                        'roles' => ['@'],
-//                    ],
-//                ],
-//            ],
-//            'verbs' => [
-//                'class' => VerbFilter::className(),
-//                'actions' => [
-//                    'logout' => ['post'],
-//                ],
-//            ],
         ];
     }
 
@@ -39,10 +22,6 @@ class SiteController extends Controller
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
-            ],
-            'captcha' => [
-                'class' => 'yii\captcha\CaptchaAction',
-                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
         ];
     }
@@ -55,7 +34,7 @@ class SiteController extends Controller
         {
             $select = '';
         }else {
-            $select = \Yii::$app->request->get()['StudentsSearch']['group'];
+            $select = \Yii::$app->request->get()['group'];
         }
 
         return $this->render('index', [

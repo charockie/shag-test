@@ -7500,3 +7500,2236 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1465042638.719
     'REQUEST_TIME' => 1465042638
 ]
+2016-06-04 15:17:03 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'Invalid validation rule: a rule must specify both attribute names and validator type.' in /var/www/shag.test/vendor/yiisoft/yii2/base/Model.php:448
+Stack trace:
+#0 /var/www/shag.test/vendor/yiisoft/yii2/base/Model.php(409): yii\base\Model->createValidators()
+#1 /var/www/shag.test/vendor/yiisoft/yii2/base/Model.php(424): yii\base\Model->getValidators()
+#2 /var/www/shag.test/vendor/yiisoft/yii2/helpers/BaseHtml.php(1262): yii\base\Model->getActiveValidators('name')
+#3 /var/www/shag.test/vendor/yiisoft/yii2/helpers/BaseHtml.php(1291): yii\helpers\BaseHtml::normalizeMaxLength(Object(app\modules\students\models\Student), 'name', Array)
+#4 /var/www/shag.test/vendor/yiisoft/yii2/widgets/ActiveField.php(362): yii\helpers\BaseHtml::activeTextInput(Object(app\modules\students\models\Student), 'name', Array)
+#5 /var/www/shag.test/modules/students/views/admin-student/_form.php(15): yii\widgets\ActiveField->textInput(Array)
+#6 /var/www/shag.test/vendor/yiisoft/yii2/base/View.php(325): require('/var/www/shag.t...')
+#7 /var/www/shag.test/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/var/www/shag.t...', Array)
+#8 /var/www/shag.test/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/var/www/shag.t...', Array, NULL)
+#9 /var/www/shag.test/modules/students/views/admin-student/create.php(19): yii\base\View->render('_form', Array)
+#10 /var/www/shag.test/vendor/yiisoft/yii2/base/View.php(325): require('/var/www/shag.t...')
+#11 /var/www/shag.test/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/var/www/shag.t...', Array)
+#12 /var/www/shag.test/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/var/www/shag.t...', Array, Object(app\modules\students\controllers\AdminStudentController))
+#13 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(378): yii\base\View->render('create', Array, Object(app\modules\students\controllers\AdminStudentController))
+#14 /var/www/shag.test/modules/students/controllers/AdminStudentController.php(75): yii\base\Controller->render('create', Array)
+#15 [internal function]: app\modules\students\controllers\AdminStudentController->actionCreate()
+#16 /var/www/shag.test/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#17 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#18 /var/www/shag.test/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('create', Array)
+#19 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('students/admin-...', Array)
+#20 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#22 {main}
+2016-06-04 15:17:03 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'students/admin-student/create'
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.shag.test/index.php?r=students%2Fadmin-student%2Findex'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35155'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=students%2Fadmin-student%2Fcreate'
+    'REQUEST_URI' => '/index.php?r=students%2Fadmin-student%2Fcreate'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465053423.252
+    'REQUEST_TIME' => 1465053423
+]
+2016-06-04 15:17:15 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'Invalid validation rule: a rule must specify both attribute names and validator type.' in /var/www/shag.test/vendor/yiisoft/yii2/base/Model.php:448
+Stack trace:
+#0 /var/www/shag.test/vendor/yiisoft/yii2/base/Model.php(409): yii\base\Model->createValidators()
+#1 /var/www/shag.test/vendor/yiisoft/yii2/base/Model.php(424): yii\base\Model->getValidators()
+#2 /var/www/shag.test/vendor/yiisoft/yii2/helpers/BaseHtml.php(1262): yii\base\Model->getActiveValidators('name')
+#3 /var/www/shag.test/vendor/yiisoft/yii2/helpers/BaseHtml.php(1291): yii\helpers\BaseHtml::normalizeMaxLength(Object(app\modules\students\models\Student), 'name', Array)
+#4 /var/www/shag.test/vendor/yiisoft/yii2/widgets/ActiveField.php(362): yii\helpers\BaseHtml::activeTextInput(Object(app\modules\students\models\Student), 'name', Array)
+#5 /var/www/shag.test/modules/students/views/admin-student/_form.php(15): yii\widgets\ActiveField->textInput(Array)
+#6 /var/www/shag.test/vendor/yiisoft/yii2/base/View.php(325): require('/var/www/shag.t...')
+#7 /var/www/shag.test/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/var/www/shag.t...', Array)
+#8 /var/www/shag.test/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/var/www/shag.t...', Array, NULL)
+#9 /var/www/shag.test/modules/students/views/admin-student/create.php(19): yii\base\View->render('_form', Array)
+#10 /var/www/shag.test/vendor/yiisoft/yii2/base/View.php(325): require('/var/www/shag.t...')
+#11 /var/www/shag.test/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/var/www/shag.t...', Array)
+#12 /var/www/shag.test/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/var/www/shag.t...', Array, Object(app\modules\students\controllers\AdminStudentController))
+#13 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(378): yii\base\View->render('create', Array, Object(app\modules\students\controllers\AdminStudentController))
+#14 /var/www/shag.test/modules/students/controllers/AdminStudentController.php(75): yii\base\Controller->render('create', Array)
+#15 [internal function]: app\modules\students\controllers\AdminStudentController->actionCreate()
+#16 /var/www/shag.test/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#17 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#18 /var/www/shag.test/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('create', Array)
+#19 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('students/admin-...', Array)
+#20 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#22 {main}
+2016-06-04 15:17:15 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'students/admin-student/create'
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.shag.test/index.php?r=students%2Fadmin-student%2Findex'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35157'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=students%2Fadmin-student%2Fcreate'
+    'REQUEST_URI' => '/index.php?r=students%2Fadmin-student%2Fcreate'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465053435.167
+    'REQUEST_TIME' => 1465053435
+]
+2016-06-04 15:17:26 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'Invalid validation rule: a rule must specify both attribute names and validator type.' in /var/www/shag.test/vendor/yiisoft/yii2/base/Model.php:448
+Stack trace:
+#0 /var/www/shag.test/vendor/yiisoft/yii2/base/Model.php(409): yii\base\Model->createValidators()
+#1 /var/www/shag.test/vendor/yiisoft/yii2/base/Model.php(424): yii\base\Model->getValidators()
+#2 /var/www/shag.test/vendor/yiisoft/yii2/helpers/BaseHtml.php(1262): yii\base\Model->getActiveValidators('name')
+#3 /var/www/shag.test/vendor/yiisoft/yii2/helpers/BaseHtml.php(1291): yii\helpers\BaseHtml::normalizeMaxLength(Object(app\modules\students\models\Student), 'name', Array)
+#4 /var/www/shag.test/vendor/yiisoft/yii2/widgets/ActiveField.php(362): yii\helpers\BaseHtml::activeTextInput(Object(app\modules\students\models\Student), 'name', Array)
+#5 /var/www/shag.test/modules/students/views/admin-student/_form.php(15): yii\widgets\ActiveField->textInput(Array)
+#6 /var/www/shag.test/vendor/yiisoft/yii2/base/View.php(325): require('/var/www/shag.t...')
+#7 /var/www/shag.test/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/var/www/shag.t...', Array)
+#8 /var/www/shag.test/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/var/www/shag.t...', Array, NULL)
+#9 /var/www/shag.test/modules/students/views/admin-student/create.php(19): yii\base\View->render('_form', Array)
+#10 /var/www/shag.test/vendor/yiisoft/yii2/base/View.php(325): require('/var/www/shag.t...')
+#11 /var/www/shag.test/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/var/www/shag.t...', Array)
+#12 /var/www/shag.test/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/var/www/shag.t...', Array, Object(app\modules\students\controllers\AdminStudentController))
+#13 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(378): yii\base\View->render('create', Array, Object(app\modules\students\controllers\AdminStudentController))
+#14 /var/www/shag.test/modules/students/controllers/AdminStudentController.php(75): yii\base\Controller->render('create', Array)
+#15 [internal function]: app\modules\students\controllers\AdminStudentController->actionCreate()
+#16 /var/www/shag.test/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#17 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#18 /var/www/shag.test/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('create', Array)
+#19 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('students/admin-...', Array)
+#20 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#22 {main}
+2016-06-04 15:17:26 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'students/admin-student/create'
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.shag.test/index.php?r=students%2Fadmin-student%2Findex'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35159'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=students%2Fadmin-student%2Fcreate'
+    'REQUEST_URI' => '/index.php?r=students%2Fadmin-student%2Fcreate'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465053446.055
+    'REQUEST_TIME' => 1465053446
+]
+2016-06-04 15:26:33 [127.0.0.1][-][-][error][yii\db\IntegrityException] exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'last_visit' cannot be null' in /var/www/shag.test/vendor/yiisoft/yii2/db/Command.php:844
+Stack trace:
+#0 /var/www/shag.test/vendor/yiisoft/yii2/db/Command.php(844): PDOStatement->execute()
+#1 /var/www/shag.test/vendor/yiisoft/yii2/db/Schema.php(451): yii\db\Command->execute()
+#2 /var/www/shag.test/vendor/yiisoft/yii2/db/ActiveRecord.php(457): yii\db\Schema->insert('<span class="st...', '[<span class="s...')
+#3 /var/www/shag.test/vendor/yiisoft/yii2/db/ActiveRecord.php(427): yii\db\ActiveRecord->insertInternal('<span class="ke...')
+#4 /var/www/shag.test/vendor/yiisoft/yii2/db/BaseActiveRecord.php(598): yii\db\ActiveRecord->insert('<span class="ke...', '<span class="ke...')
+#5 /var/www/shag.test/modules/students/controllers/AdminStudentController.php(69): yii\db\BaseActiveRecord->save()
+#6 [internal function]: app\modules\students\controllers\AdminStudentController->actionCreate()
+#7 /var/www/shag.test/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 /var/www/shag.test/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#13 {main}
+
+Next exception 'yii\db\IntegrityException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'last_visit' cannot be null
+The SQL being executed was: INSERT INTO `students` (`name`, `surname`, `email`, `phone`, `address`, `age`, `GPA`, `last_visit`, `group`) VALUES ('wqq', 'wwwww', 'eqweqw@dsf.com', '0930240345', 'eregtrg', 22, '011', NULL, 3)' in /var/www/shag.test/vendor/yiisoft/yii2/db/Schema.php:633
+Stack trace:
+#0 /var/www/shag.test/vendor/yiisoft/yii2/db/Command.php(854): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `st...')
+#1 /var/www/shag.test/vendor/yiisoft/yii2/db/Schema.php(451): yii\db\Command->execute()
+#2 /var/www/shag.test/vendor/yiisoft/yii2/db/ActiveRecord.php(457): yii\db\Schema->insert('<span class="st...', '[<span class="s...')
+#3 /var/www/shag.test/vendor/yiisoft/yii2/db/ActiveRecord.php(427): yii\db\ActiveRecord->insertInternal('<span class="ke...')
+#4 /var/www/shag.test/vendor/yiisoft/yii2/db/BaseActiveRecord.php(598): yii\db\ActiveRecord->insert('<span class="ke...', '<span class="ke...')
+#5 /var/www/shag.test/modules/students/controllers/AdminStudentController.php(69): yii\db\BaseActiveRecord->save()
+#6 [internal function]: app\modules\students\controllers\AdminStudentController->actionCreate()
+#7 /var/www/shag.test/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 /var/www/shag.test/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1048
+    [2] => Column 'last_visit' cannot be null
+)
+
+2016-06-04 15:26:33 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'students/admin-student/create'
+]
+
+$_POST = [
+    '_csrf' => 'aG5FLTg3SDAmQ3xGcVV8ACkcFHxIWzh3GFZxfwtHe2YlACR6SmE8cg=='
+    'Student' => [
+        'name' => 'wqq'
+        'surname' => 'wwwww'
+        'email' => 'eqweqw@dsf.com'
+        'phone' => '0930240345'
+        'address' => 'eregtrg'
+        'age' => '22'
+        'GPA' => '011'
+        'last_visit' => ''
+        'group' => '3'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.shag.test/index.php?r=students%2Fadmin-student%2Fcreate'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '297'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35210'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=students%2Fadmin-student%2Fcreate'
+    'REQUEST_URI' => '/index.php?r=students%2Fadmin-student%2Fcreate'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465053993.673
+    'REQUEST_TIME' => 1465053993
+]
+2016-06-04 15:29:05 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'Invalid validation rule: a rule must specify both attribute names and validator type.' in /var/www/shag.test/vendor/yiisoft/yii2/base/Model.php:448
+Stack trace:
+#0 /var/www/shag.test/vendor/yiisoft/yii2/base/Model.php(409): yii\base\Model->createValidators()
+#1 /var/www/shag.test/vendor/yiisoft/yii2/base/Model.php(185): yii\base\Model->getValidators()
+#2 /var/www/shag.test/vendor/yiisoft/yii2/base/Model.php(751): yii\base\Model->scenarios()
+#3 /var/www/shag.test/vendor/yiisoft/yii2/base/Model.php(695): yii\base\Model->safeAttributes()
+#4 /var/www/shag.test/vendor/yiisoft/yii2/base/Model.php(827): yii\base\Model->setAttributes(Array)
+#5 /var/www/shag.test/modules/students/controllers/AdminStudentController.php(69): yii\base\Model->load(Array)
+#6 [internal function]: app\modules\students\controllers\AdminStudentController->actionCreate()
+#7 /var/www/shag.test/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#8 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/shag.test/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('create', Array)
+#10 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('students/admin-...', Array)
+#11 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#13 {main}
+2016-06-04 15:29:05 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'students/admin-student/create'
+]
+
+$_POST = [
+    '_csrf' => 'Qjg1TUZtNDUMFQwmDw8ABQNKZBw2AURyMgABH3UdB2MPVlQaNDtAdw=='
+    'Student' => [
+        'name' => 'wqq'
+        'surname' => 'wwwww'
+        'email' => 'eqweqw@dsf.com'
+        'phone' => '0930240345'
+        'address' => 'eregtrg'
+        'age' => '22'
+        'GPA' => '011'
+        'last_visit' => '12 may 2014'
+        'group' => '3'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.shag.test/index.php?r=students%2Fadmin-student%2Fcreate'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '308'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35223'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=students%2Fadmin-student%2Fcreate'
+    'REQUEST_URI' => '/index.php?r=students%2Fadmin-student%2Fcreate'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465054145.165
+    'REQUEST_TIME' => 1465054145
+]
+2016-06-04 15:30:33 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: yii\validators\DateValidator::0' in /var/www/shag.test/vendor/yiisoft/yii2/base/Component.php:197
+Stack trace:
+#0 /var/www/shag.test/vendor/yiisoft/yii2/BaseYii.php(521): yii\base\Component->__set('0', 'string')
+#1 /var/www/shag.test/vendor/yiisoft/yii2/base/Object.php(105): yii\BaseYii::configure(Object(yii\validators\DateValidator), Array)
+#2 [internal function]: yii\base\Object->__construct(Array)
+#3 /var/www/shag.test/vendor/yiisoft/yii2/di/Container.php(374): ReflectionClass->newInstanceArgs(Array)
+#4 /var/www/shag.test/vendor/yiisoft/yii2/di/Container.php(153): yii\di\Container->build('yii\\validators\\...', Array, Array)
+#5 /var/www/shag.test/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\\validators\\...', Array, Array)
+#6 /var/www/shag.test/vendor/yiisoft/yii2/validators/Validator.php(209): yii\BaseYii::createObject(Array)
+#7 /var/www/shag.test/vendor/yiisoft/yii2/base/Model.php(445): yii\validators\Validator::createValidator('date', Object(app\modules\students\models\Student), Array, Array)
+#8 /var/www/shag.test/vendor/yiisoft/yii2/base/Model.php(409): yii\base\Model->createValidators()
+#9 /var/www/shag.test/vendor/yiisoft/yii2/base/Model.php(185): yii\base\Model->getValidators()
+#10 /var/www/shag.test/vendor/yiisoft/yii2/base/Model.php(751): yii\base\Model->scenarios()
+#11 /var/www/shag.test/vendor/yiisoft/yii2/base/Model.php(695): yii\base\Model->safeAttributes()
+#12 /var/www/shag.test/vendor/yiisoft/yii2/base/Model.php(827): yii\base\Model->setAttributes(Array)
+#13 /var/www/shag.test/modules/students/controllers/AdminStudentController.php(69): yii\base\Model->load(Array)
+#14 [internal function]: app\modules\students\controllers\AdminStudentController->actionCreate()
+#15 /var/www/shag.test/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#16 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#17 /var/www/shag.test/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('create', Array)
+#18 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('students/admin-...', Array)
+#19 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#21 {main}
+2016-06-04 15:30:33 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'students/admin-student/create'
+]
+
+$_POST = [
+    '_csrf' => 'VWFIc2d4dmcbTHEYLhpCVxQTGSIXFAYgJVl8IVQIRTEYDykkFS4CJQ=='
+    'Student' => [
+        'name' => 'wqq'
+        'surname' => 'wwwww'
+        'email' => 'eqweqw@dsf.com'
+        'phone' => '0930240345'
+        'address' => 'eregtrg'
+        'age' => '22'
+        'GPA' => '011'
+        'last_visit' => '02.02.2016'
+        'group' => '3'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.shag.test/index.php?r=students%2Fadmin-student%2Fcreate'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '307'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35233'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=students%2Fadmin-student%2Fcreate'
+    'REQUEST_URI' => '/index.php?r=students%2Fadmin-student%2Fcreate'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465054233.961
+    'REQUEST_TIME' => 1465054233
+]
+2016-06-04 15:30:46 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: yii\validators\StringValidator::format' in /var/www/shag.test/vendor/yiisoft/yii2/base/Component.php:197
+Stack trace:
+#0 /var/www/shag.test/vendor/yiisoft/yii2/BaseYii.php(521): yii\base\Component->__set('format', 'MM/dd/yyyy')
+#1 /var/www/shag.test/vendor/yiisoft/yii2/base/Object.php(105): yii\BaseYii::configure(Object(yii\validators\StringValidator), Array)
+#2 [internal function]: yii\base\Object->__construct(Array)
+#3 /var/www/shag.test/vendor/yiisoft/yii2/di/Container.php(374): ReflectionClass->newInstanceArgs(Array)
+#4 /var/www/shag.test/vendor/yiisoft/yii2/di/Container.php(153): yii\di\Container->build('yii\\validators\\...', Array, Array)
+#5 /var/www/shag.test/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\\validators\\...', Array, Array)
+#6 /var/www/shag.test/vendor/yiisoft/yii2/validators/Validator.php(209): yii\BaseYii::createObject(Array)
+#7 /var/www/shag.test/vendor/yiisoft/yii2/base/Model.php(445): yii\validators\Validator::createValidator('string', Object(app\modules\students\models\Student), Array, Array)
+#8 /var/www/shag.test/vendor/yiisoft/yii2/base/Model.php(409): yii\base\Model->createValidators()
+#9 /var/www/shag.test/vendor/yiisoft/yii2/base/Model.php(185): yii\base\Model->getValidators()
+#10 /var/www/shag.test/vendor/yiisoft/yii2/base/Model.php(751): yii\base\Model->scenarios()
+#11 /var/www/shag.test/vendor/yiisoft/yii2/base/Model.php(695): yii\base\Model->safeAttributes()
+#12 /var/www/shag.test/vendor/yiisoft/yii2/base/Model.php(827): yii\base\Model->setAttributes(Array)
+#13 /var/www/shag.test/modules/students/controllers/AdminStudentController.php(69): yii\base\Model->load(Array)
+#14 [internal function]: app\modules\students\controllers\AdminStudentController->actionCreate()
+#15 /var/www/shag.test/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#16 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#17 /var/www/shag.test/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('create', Array)
+#18 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('students/admin-...', Array)
+#19 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#21 {main}
+2016-06-04 15:30:46 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'students/admin-student/create'
+]
+
+$_POST = [
+    '_csrf' => 'VWFIc2d4dmcbTHEYLhpCVxQTGSIXFAYgJVl8IVQIRTEYDykkFS4CJQ=='
+    'Student' => [
+        'name' => 'wqq'
+        'surname' => 'wwwww'
+        'email' => 'eqweqw@dsf.com'
+        'phone' => '0930240345'
+        'address' => 'eregtrg'
+        'age' => '22'
+        'GPA' => '011'
+        'last_visit' => '02.02.2016'
+        'group' => '3'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.shag.test/index.php?r=students%2Fadmin-student%2Fcreate'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '307'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35235'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=students%2Fadmin-student%2Fcreate'
+    'REQUEST_URI' => '/index.php?r=students%2Fadmin-student%2Fcreate'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465054246.71
+    'REQUEST_TIME' => 1465054246
+]
+2016-06-04 15:38:47 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/shag.test/vendor/yiisoft/yii2/web/Request.php:189
+Stack trace:
+#0 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#3 {main}
+2016-06-04 15:38:47 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/index'
+    'StudentsSearch' => [
+        'group' => '1'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35269'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex&StudentsSearch%5Bgroup%5D=1'
+    'REQUEST_URI' => '/index.php?r=site%2Findex&StudentsSearch%5Bgroup%5D=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465054727.813
+    'REQUEST_TIME' => 1465054727
+]
+2016-06-04 15:38:53 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/shag.test/vendor/yiisoft/yii2/web/Request.php:189
+Stack trace:
+#0 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#3 {main}
+2016-06-04 15:38:53 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35272'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465054733.083
+    'REQUEST_TIME' => 1465054733
+]
+2016-06-04 15:39:46 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/shag.test/vendor/yiisoft/yii2/web/Request.php:189
+Stack trace:
+#0 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#3 {main}
+2016-06-04 15:39:46 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.shag.test/?StudentsSearch%5Bgroup%5D='
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35281'
+    'REDIRECT_URL' => '/students/admin-student/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/students/admin-student/index'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465054786.969
+    'REQUEST_TIME' => 1465054786
+]
+2016-06-04 15:40:24 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/shag.test/vendor/yiisoft/yii2/web/Request.php:189
+Stack trace:
+#0 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#3 {main}
+2016-06-04 15:40:24 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.shag.test/admin-student'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35284'
+    'REDIRECT_URL' => '/groups/admin-group/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/groups/admin-group/index'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465054824.145
+    'REQUEST_TIME' => 1465054824
+]
+2016-06-04 15:40:59 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/shag.test/vendor/yiisoft/yii2/web/Request.php:189
+Stack trace:
+#0 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#3 {main}
+2016-06-04 15:40:59 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.shag.test/admin-group'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35286'
+    'REDIRECT_URL' => '/groups/admin-group/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/groups/admin-group/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465054859.24
+    'REQUEST_TIME' => 1465054859
+]
+2016-06-04 15:45:24 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/shag.test/vendor/yiisoft/yii2/web/Request.php:189
+Stack trace:
+#0 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#3 {main}
+2016-06-04 15:45:24 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.shag.test/admin-group'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35303'
+    'REDIRECT_URL' => '/groups/admin-group/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/groups/admin-group/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465055124.887
+    'REQUEST_TIME' => 1465055124
+]
+2016-06-04 15:46:58 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/shag.test/vendor/yiisoft/yii2/web/Request.php:189
+Stack trace:
+#0 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#3 {main}
+2016-06-04 15:46:58 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.shag.test/admin-group'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35312'
+    'REDIRECT_URL' => '/groups/admin-group/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/groups/admin-group/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465055218.717
+    'REQUEST_TIME' => 1465055218
+]
+2016-06-04 15:47:08 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/shag.test/vendor/yiisoft/yii2/web/Request.php:189
+Stack trace:
+#0 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#3 {main}
+2016-06-04 15:47:08 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.shag.test/admin-group'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35313'
+    'REDIRECT_URL' => '/groups/admin-group/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/groups/admin-group/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465055228.384
+    'REQUEST_TIME' => 1465055228
+]
+2016-06-04 15:47:55 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/shag.test/vendor/yiisoft/yii2/web/Request.php:189
+Stack trace:
+#0 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#3 {main}
+2016-06-04 15:47:55 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.shag.test/groups/admin-group/create'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35319'
+    'REDIRECT_URL' => '/admin-student'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin-student'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465055275.673
+    'REQUEST_TIME' => 1465055275
+]
+2016-06-04 15:48:49 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/shag.test/vendor/yiisoft/yii2/web/Request.php:189
+Stack trace:
+#0 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#3 {main}
+2016-06-04 15:48:49 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.shag.test/admin-student'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35337'
+    'REDIRECT_URL' => '/admin/students/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/students/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465055329.276
+    'REQUEST_TIME' => 1465055329
+]
+2016-06-04 15:54:47 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: StudentsSearch' in /var/www/shag.test/controllers/SiteController.php:58
+Stack trace:
+#0 /var/www/shag.test/controllers/SiteController.php(58): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/var/www/shag.t...', 58, Array)
+#1 [internal function]: app\controllers\SiteController->actionIndex()
+#2 /var/www/shag.test/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/shag.test/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#5 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/index', Array)
+#6 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#8 {main}
+2016-06-04 15:54:47 [127.0.0.1][-][-][info][application] $_GET = [
+    'group' => '1'
+    '_pjax' => '#groups'
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_CSRF_TOKEN' => 'TVpudUxySkQDd1ceBRB.dAwoPyQ8HjoDPWJaJ38CeRIANA8iPiQ.Bg=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#groups'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.shag.test/'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35357'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'group=1&_pjax=%23groups'
+    'REQUEST_URI' => '/?group=1&_pjax=%23groups'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465055687.143
+    'REQUEST_TIME' => 1465055687
+]
+2016-06-04 15:54:47 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: StudentsSearch' in /var/www/shag.test/controllers/SiteController.php:58
+Stack trace:
+#0 /var/www/shag.test/controllers/SiteController.php(58): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/var/www/shag.t...', 58, Array)
+#1 [internal function]: app\controllers\SiteController->actionIndex()
+#2 /var/www/shag.test/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/shag.test/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#5 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/index', Array)
+#6 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#8 {main}
+2016-06-04 15:54:47 [127.0.0.1][-][-][info][application] $_GET = [
+    'group' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.shag.test/'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35361'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'group=1'
+    'REQUEST_URI' => '/?group=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465055687.26
+    'REQUEST_TIME' => 1465055687
+]
+2016-06-04 15:54:47 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: StudentsSearch' in /var/www/shag.test/controllers/SiteController.php:58
+Stack trace:
+#0 /var/www/shag.test/controllers/SiteController.php(58): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/var/www/shag.t...', 58, Array)
+#1 [internal function]: app\controllers\SiteController->actionIndex()
+#2 /var/www/shag.test/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/shag.test/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#5 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/index', Array)
+#6 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#8 {main}
+2016-06-04 15:54:47 [127.0.0.1][-][-][info][application] $_GET = [
+    '_pjax' => '#students'
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_CSRF_TOKEN' => 'TVpudUxySkQDd1ceBRB.dAwoPyQ8HjoDPWJaJ38CeRIANA8iPiQ.Bg=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#students'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.shag.test/'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35359'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => '_pjax=%23students'
+    'REQUEST_URI' => '/?_pjax=%23students'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465055687.285
+    'REQUEST_TIME' => 1465055687
+]
+2016-06-04 15:59:34 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'Missing argument 1 for yii\web\View::registerJs(), called in /var/www/shag.test/views/site/_form.php on line 7 and defined' in /var/www/shag.test/vendor/yiisoft/yii2/web/View.php:434
+Stack trace:
+#0 /var/www/shag.test/vendor/yiisoft/yii2/web/View.php(434): yii\base\ErrorHandler->handleError(2, 'Missing argumen...', '/var/www/shag.t...', 434, Array)
+#1 /var/www/shag.test/views/site/_form.php(7): yii\web\View->registerJs()
+#2 /var/www/shag.test/vendor/yiisoft/yii2/base/View.php(325): require('/var/www/shag.t...')
+#3 /var/www/shag.test/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/var/www/shag.t...', Array)
+#4 /var/www/shag.test/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/var/www/shag.t...', Array, NULL)
+#5 /var/www/shag.test/views/site/index.php(15): yii\base\View->render('_form', Array)
+#6 /var/www/shag.test/vendor/yiisoft/yii2/base/View.php(325): require('/var/www/shag.t...')
+#7 /var/www/shag.test/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/var/www/shag.t...', Array)
+#8 /var/www/shag.test/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/var/www/shag.t...', Array, Object(app\controllers\SiteController))
+#9 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(378): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#10 /var/www/shag.test/controllers/SiteController.php(66): yii\base\Controller->render('index', Array)
+#11 [internal function]: app\controllers\SiteController->actionIndex()
+#12 /var/www/shag.test/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#13 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 /var/www/shag.test/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#15 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/index', Array)
+#16 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#18 {main}
+2016-06-04 15:59:34 [127.0.0.1][-][-][info][application] $_GET = [
+    'group' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35378'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'group=1'
+    'REQUEST_URI' => '/?group=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465055974.839
+    'REQUEST_TIME' => 1465055974
+]
+2016-06-04 15:59:50 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: group' in /var/www/shag.test/controllers/SiteController.php:58
+Stack trace:
+#0 /var/www/shag.test/controllers/SiteController.php(58): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/var/www/shag.t...', 58, Array)
+#1 [internal function]: app\controllers\SiteController->actionIndex()
+#2 /var/www/shag.test/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/shag.test/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#5 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/index', Array)
+#6 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#8 {main}
+2016-06-04 15:59:50 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/student'
+]
+
+$_POST = [
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_CSRF_TOKEN' => 'S2xKWGJvOXcFQXMzKw0NRwoeGwkSA0kwO1R.ClEfCiEGAisPEDlNNQ=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.shag.test/?group=1'
+    'CONTENT_LENGTH' => '4'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35383'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site/student'
+    'REQUEST_URI' => '/index.php?r=site/student'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465055990.442
+    'REQUEST_TIME' => 1465055990
+]
+2016-06-04 15:59:53 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: group' in /var/www/shag.test/controllers/SiteController.php:58
+Stack trace:
+#0 /var/www/shag.test/controllers/SiteController.php(58): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/var/www/shag.t...', 58, Array)
+#1 [internal function]: app\controllers\SiteController->actionIndex()
+#2 /var/www/shag.test/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/shag.test/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#5 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/index', Array)
+#6 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#8 {main}
+2016-06-04 15:59:53 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/student'
+]
+
+$_POST = [
+    'id' => '2'
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_CSRF_TOKEN' => 'S2xKWGJvOXcFQXMzKw0NRwoeGwkSA0kwO1R.ClEfCiEGAisPEDlNNQ=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.shag.test/?group=1'
+    'CONTENT_LENGTH' => '4'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35387'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site/student'
+    'REQUEST_URI' => '/index.php?r=site/student'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465055993.46
+    'REQUEST_TIME' => 1465055993
+]
+2016-06-04 16:01:48 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: group' in /var/www/shag.test/controllers/SiteController.php:58
+Stack trace:
+#0 /var/www/shag.test/controllers/SiteController.php(58): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/var/www/shag.t...', 58, Array)
+#1 [internal function]: app\controllers\SiteController->actionIndex()
+#2 /var/www/shag.test/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/shag.test/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#5 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/index', Array)
+#6 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#8 {main}
+2016-06-04 16:01:48 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/student'
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35399'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/student'
+    'REQUEST_URI' => '/index.php?r=site/student'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465056108.314
+    'REQUEST_TIME' => 1465056108
+]
+2016-06-04 16:02:12 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: group' in /var/www/shag.test/controllers/SiteController.php:58
+Stack trace:
+#0 /var/www/shag.test/controllers/SiteController.php(58): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/var/www/shag.t...', 58, Array)
+#1 [internal function]: app\controllers\SiteController->actionIndex()
+#2 /var/www/shag.test/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/shag.test/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#5 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/index', Array)
+#6 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#8 {main}
+2016-06-04 16:02:12 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/student'
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35402'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/student'
+    'REQUEST_URI' => '/index.php?r=site/student'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465056132.694
+    'REQUEST_TIME' => 1465056132
+]
+2016-06-04 16:02:16 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: group' in /var/www/shag.test/controllers/SiteController.php:58
+Stack trace:
+#0 /var/www/shag.test/controllers/SiteController.php(58): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/var/www/shag.t...', 58, Array)
+#1 [internal function]: app\controllers\SiteController->actionIndex()
+#2 /var/www/shag.test/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/shag.test/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#5 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/index', Array)
+#6 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#8 {main}
+2016-06-04 16:02:16 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/student'
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35403'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/student'
+    'REQUEST_URI' => '/index.php?r=site/student'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465056136.096
+    'REQUEST_TIME' => 1465056136
+]
+2016-06-04 16:03:35 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: group' in /var/www/shag.test/controllers/SiteController.php:58
+Stack trace:
+#0 /var/www/shag.test/controllers/SiteController.php(58): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/var/www/shag.t...', 58, Array)
+#1 [internal function]: app\controllers\SiteController->actionIndex()
+#2 /var/www/shag.test/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/shag.test/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#5 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/index', Array)
+#6 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#8 {main}
+2016-06-04 16:03:35 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/student'
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35406'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/student'
+    'REQUEST_URI' => '/index.php?r=site/student'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465056215.653
+    'REQUEST_TIME' => 1465056215
+]
+2016-06-04 16:19:39 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined offset: 1' in /var/www/shag.test/controllers/SiteController.php:59
+Stack trace:
+#0 /var/www/shag.test/controllers/SiteController.php(59): yii\base\ErrorHandler->handleError(8, 'Undefined offse...', '/var/www/shag.t...', 59, Array)
+#1 [internal function]: app\controllers\SiteController->actionIndex()
+#2 /var/www/shag.test/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/shag.test/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#5 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/index', Array)
+#6 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#8 {main}
+2016-06-04 16:19:39 [127.0.0.1][-][-][info][application] $_GET = [
+    'group' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35497'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'group=1'
+    'REQUEST_URI' => '/?group=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465057179.961
+    'REQUEST_TIME' => 1465057179
+]
+2016-06-04 16:19:53 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined offset: 1' in /var/www/shag.test/controllers/SiteController.php:59
+Stack trace:
+#0 /var/www/shag.test/controllers/SiteController.php(59): yii\base\ErrorHandler->handleError(8, 'Undefined offse...', '/var/www/shag.t...', 59, Array)
+#1 [internal function]: app\controllers\SiteController->actionIndex()
+#2 /var/www/shag.test/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/shag.test/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#5 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/index', Array)
+#6 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#8 {main}
+2016-06-04 16:19:53 [127.0.0.1][-][-][info][application] $_GET = [
+    'group' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35498'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'group=1'
+    'REQUEST_URI' => '/?group=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465057193.645
+    'REQUEST_TIME' => 1465057193
+]
+2016-06-04 16:20:57 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: group' in /var/www/shag.test/controllers/SiteController.php:58
+Stack trace:
+#0 /var/www/shag.test/controllers/SiteController.php(58): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/var/www/shag.t...', 58, Array)
+#1 [internal function]: app\controllers\SiteController->actionIndex()
+#2 /var/www/shag.test/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/shag.test/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#5 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/index', Array)
+#6 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#8 {main}
+2016-06-04 16:20:57 [127.0.0.1][-][-][info][application] $_GET = [
+    'searchStudent' => [
+        'group' => '1'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35501'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'searchStudent[group]=1'
+    'REQUEST_URI' => '/?searchStudent[group]=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465057257.052
+    'REQUEST_TIME' => 1465057257
+]
+2016-06-04 16:33:52 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: group' in /var/www/shag.test/controllers/SiteController.php:65
+Stack trace:
+#0 /var/www/shag.test/controllers/SiteController.php(65): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/var/www/shag.t...', 65, Array)
+#1 [internal function]: app\controllers\SiteController->actionIndex()
+#2 /var/www/shag.test/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/shag.test/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#5 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/index', Array)
+#6 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#8 {main}
+2016-06-04 16:33:52 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35539'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465058032.625
+    'REQUEST_TIME' => 1465058032
+]
+2016-06-04 16:34:39 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: group' in /var/www/shag.test/controllers/SiteController.php:58
+Stack trace:
+#0 /var/www/shag.test/controllers/SiteController.php(58): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/var/www/shag.t...', 58, Array)
+#1 [internal function]: app\controllers\SiteController->actionIndex()
+#2 /var/www/shag.test/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/shag.test/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#5 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/index', Array)
+#6 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#8 {main}
+2016-06-04 16:34:39 [127.0.0.1][-][-][info][application] $_GET = [
+    'StudentsSearch' => [
+        'group' => '1'
+    ]
+    '_pjax' => '#groups'
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_CSRF_TOKEN' => 'czF1S045d0k9HEwgB1tDeTJDJBo.VQcOAwlBGX1JRB8.XxQcPG8DCw=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#groups'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.shag.test/'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35542'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'StudentsSearch%5Bgroup%5D=1&_pjax=%23groups'
+    'REQUEST_URI' => '/?StudentsSearch%5Bgroup%5D=1&_pjax=%23groups'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465058079.003
+    'REQUEST_TIME' => 1465058079
+]
+2016-06-04 16:34:39 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: group' in /var/www/shag.test/controllers/SiteController.php:58
+Stack trace:
+#0 /var/www/shag.test/controllers/SiteController.php(58): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/var/www/shag.t...', 58, Array)
+#1 [internal function]: app\controllers\SiteController->actionIndex()
+#2 /var/www/shag.test/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/shag.test/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#5 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/index', Array)
+#6 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#8 {main}
+2016-06-04 16:34:39 [127.0.0.1][-][-][info][application] $_GET = [
+    'StudentsSearch' => [
+        'group' => '1'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.shag.test/'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35545'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'StudentsSearch%5Bgroup%5D=1'
+    'REQUEST_URI' => '/?StudentsSearch%5Bgroup%5D=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465058079.134
+    'REQUEST_TIME' => 1465058079
+]
+2016-06-04 16:34:39 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: group' in /var/www/shag.test/controllers/SiteController.php:58
+Stack trace:
+#0 /var/www/shag.test/controllers/SiteController.php(58): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/var/www/shag.t...', 58, Array)
+#1 [internal function]: app\controllers\SiteController->actionIndex()
+#2 /var/www/shag.test/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/shag.test/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#5 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/index', Array)
+#6 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#8 {main}
+2016-06-04 16:34:39 [127.0.0.1][-][-][info][application] $_GET = [
+    '_pjax' => '#students'
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_CSRF_TOKEN' => 'czF1S045d0k9HEwgB1tDeTJDJBo.VQcOAwlBGX1JRB8.XxQcPG8DCw=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#students'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.shag.test/'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35547'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => '_pjax=%23students'
+    'REQUEST_URI' => '/?_pjax=%23students'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465058079.167
+    'REQUEST_TIME' => 1465058079
+]
+2016-06-04 16:35:08 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: studentsSearch' in /var/www/shag.test/controllers/SiteController.php:58
+Stack trace:
+#0 /var/www/shag.test/controllers/SiteController.php(58): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/var/www/shag.t...', 58, Array)
+#1 [internal function]: app\controllers\SiteController->actionIndex()
+#2 /var/www/shag.test/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/shag.test/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#5 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/index', Array)
+#6 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#8 {main}
+2016-06-04 16:35:08 [127.0.0.1][-][-][info][application] $_GET = [
+    'StudentsSearch' => [
+        'group' => '1'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.shag.test/'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35551'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'StudentsSearch%5Bgroup%5D=1'
+    'REQUEST_URI' => '/?StudentsSearch%5Bgroup%5D=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465058108.149
+    'REQUEST_TIME' => 1465058108
+]
+2016-06-04 16:43:18 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: StudentsSearch' in /var/www/shag.test/controllers/SiteController.php:58
+Stack trace:
+#0 /var/www/shag.test/controllers/SiteController.php(58): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/var/www/shag.t...', 58, Array)
+#1 [internal function]: app\controllers\SiteController->actionIndex()
+#2 /var/www/shag.test/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/shag.test/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#5 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/index', Array)
+#6 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#8 {main}
+2016-06-04 16:43:18 [127.0.0.1][-][-][info][application] $_GET = [
+    'group' => '1'
+    '_pjax' => '#groups'
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_CSRF_TOKEN' => 'WG56ekxmYjAWQ0MRBQRWABkcKys8ChJ3KFZOKH8WUWYVABstPjAWcg=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#groups'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.shag.test/'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35568'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'group=1&_pjax=%23groups'
+    'REQUEST_URI' => '/?group=1&_pjax=%23groups'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465058598.683
+    'REQUEST_TIME' => 1465058598
+]
+2016-06-04 16:43:19 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: StudentsSearch' in /var/www/shag.test/controllers/SiteController.php:58
+Stack trace:
+#0 /var/www/shag.test/controllers/SiteController.php(58): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/var/www/shag.t...', 58, Array)
+#1 [internal function]: app\controllers\SiteController->actionIndex()
+#2 /var/www/shag.test/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/shag.test/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#5 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/index', Array)
+#6 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#8 {main}
+2016-06-04 16:43:19 [127.0.0.1][-][-][info][application] $_GET = [
+    'group' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.shag.test/'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35569'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'group=1'
+    'REQUEST_URI' => '/?group=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465058599.059
+    'REQUEST_TIME' => 1465058599
+]
+2016-06-04 16:43:19 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: StudentsSearch' in /var/www/shag.test/controllers/SiteController.php:58
+Stack trace:
+#0 /var/www/shag.test/controllers/SiteController.php(58): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/var/www/shag.t...', 58, Array)
+#1 [internal function]: app\controllers\SiteController->actionIndex()
+#2 /var/www/shag.test/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/shag.test/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/shag.test/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#5 /var/www/shag.test/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/index', Array)
+#6 /var/www/shag.test/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/shag.test/web/index.php(14): yii\base\Application->run()
+#8 {main}
+2016-06-04 16:43:19 [127.0.0.1][-][-][info][application] $_GET = [
+    '_pjax' => '#students'
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_CSRF_TOKEN' => 'WG56ekxmYjAWQ0MRBQRWABkcKys8ChJ3KFZOKH8WUWYVABstPjAWcg=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#students'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.shag.test/'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35572'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => '_pjax=%23students'
+    'REQUEST_URI' => '/?_pjax=%23students'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465058599.12
+    'REQUEST_TIME' => 1465058599
+]
+2016-06-04 16:54:08 [127.0.0.1][-][-][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'Cannot use yii\bootstrap\Html as Html because the name is already in use' in /var/www/shag.test/views/site/_form.php:4
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-06-04 16:54:08 [127.0.0.1][-][-][info][application] $_GET = [
+    'group' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"N-9kIb40ArQQplpGp84R3p3VMnaWrVtB\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.shag.test'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:46.0) Gecko/20100101 Firefox/46.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ed10ce5491d8343a171114a17494bf93b2fc46eca9b844eb8a8de809bdd890a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22N-9kIb40ArQQplpGp84R3p3VMnaWrVtB%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.shag.test Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.shag.test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/shag.test/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/shag.test/web/index.php'
+    'REMOTE_PORT' => '35606'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'group=1'
+    'REQUEST_URI' => '/?group=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465059248.617
+    'REQUEST_TIME' => 1465059248
+]

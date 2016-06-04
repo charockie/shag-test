@@ -74,4 +74,9 @@ class StudentsSearch extends Student
 
         return $dataProvider;
     }
+
+    public function formName()
+    {
+        return '';
+    }
 }

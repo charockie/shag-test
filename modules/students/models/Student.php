@@ -38,10 +38,15 @@ class Student extends \yii\db\ActiveRecord
     {
         return [
             [['name', 'surname', 'email', 'phone', 'address', 'age', 'GPA', 'last_visit'], 'required'],
-            [['age', 'group'], 'integer'],
+            [['group'], 'integer'],
+            ['age', 'integer', 'max' => 99, 'min' => 15],
             [['last_visit'], 'safe'],
-            [['name', 'surname', 'email'], 'string', 'max' => 50],
-            [['phone', 'address', 'GPA'], 'string', 'max' => 20],
+            [['phone'], 'integer', 'max' => 999999999, 'min' => 99999],
+            [['GPA'], 'integer', 'max' => 100, 'min' => 1],
+            ['email', 'email'],
+            [['last_visit'], 'string'],
+            [['name', 'surname', 'email'], 'string', 'max' => 50, 'min' => 2],
+            [['address'], 'string', 'max' => 20],
             [['group'], 'exist', 'skipOnError' => true, 'targetClass' => Group::className(), 'targetAttribute' => ['group' => 'id']],
         ];
     }
