@@ -1,7 +1,3 @@
-// $('#drop-list').change(function(){
-//     $(this).parent('form').submit();
-// });
-
 $("document").ready(function(){
     $("#groups").on("pjax:end", function() {
         $.pjax.reload({container:"#students"});
